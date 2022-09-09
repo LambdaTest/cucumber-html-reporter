@@ -96,6 +96,19 @@
             </h5>
           </div>
         </div>
+        <% if (suite.scenarios.rerun) { %>
+          <div class="card yellow-box">
+            <div class="feature-title">
+              <h4>Re-run Scenarios</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.scenarios.rerun %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
         <% if (suite.scenarios.skipped) { %>
           <div class="card yellow-box">
             <div class="feature-title">
@@ -107,43 +120,47 @@
               </h5>
             </div>
           </div>
-          <% } %>
-            <% if (suite.scenarios.pending) { %>
-              <div class="card gray-box">
-                <div class="feature-title">
-                  <h4>Pending Scenarios</h2>
-                </div>
-                <div class="feature-value">
-                  <h5>
-                    <%= suite.scenarios.pending %>
-                  </h5>
-                </div>
-              </div>
-              <% } %>
-                <% if (suite.scenarios.notdefined) { %>
-                  <div class="card undefined-box">
-                    <div class="feature-title">
-                      <h4>Undefined Scenarios</h2>
-                    </div>
-                    <div class="feature-value">
-                      <h5>
-                        <%= suite.scenarios.notdefined %>
-                      </h5>
-                    </div>
-                  </div>
-                  <% } %>
-                    <% if (suite.scenarios.ambiguous) { %>
-                      <div class="card amb-box">
-                        <div class="feature-title">
-                          <h4>Ambiguous Scenarios</h2>
-                        </div>
-                        <div class="feature-value">
-                          <h5>
-                            <%= suite.scenarios.ambiguous %>
-                          </h5>
-                        </div>
-                      </div>
-                      <% } %>
+          <% }
+        %>
+        <% if (suite.scenarios.pending) { %>
+          <div class="card gray-box">
+            <div class="feature-title">
+              <h4>Pending Scenarios</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.scenarios.pending %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
+        <% if (suite.scenarios.notdefined) { %>
+          <div class="card undefined-box">
+            <div class="feature-title">
+              <h4>Undefined Scenarios</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.scenarios.notdefined %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
+        <% if (suite.scenarios.ambiguous) { %>
+          <div class="card amb-box">
+            <div class="feature-title">
+              <h4>Ambiguous Scenarios</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.scenarios.ambiguous %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
       </div>
       <div class="row">
         <div class="chart col-lg-6 col-md-6" id="piechart_features"></div>
@@ -206,6 +223,7 @@
                                                             "title" : "Scenarios",
                                                             "failed" : <%= suite.scenarios.failed %>,
                                                             "passed" : <%= suite.scenarios.passed %>,
+                                                            "rerun" : <%= suite.scenarios.rerun %>,
                                                             "notdefined" : <%= suite.scenarios.notdefined %>,
                                                             "pending" : <%= suite.scenarios.pending %>,
                                                             "skipped" : <%= suite.scenarios.skipped %>,

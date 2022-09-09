@@ -6,10 +6,11 @@ function drawChart(chartData) {
         ['Pending', chartData.pending],
         ['Undefined', chartData.notdefined],
         ['Ambiguous', chartData.ambiguous],
-        ['Skipped', chartData.skipped]        
+        ['Skipped', chartData.skipped],
+        ['Re-run', chartData.rerun]
     ]);
 
-    var total = chartData.passed + chartData.failed + (chartData.pending || 0) + (chartData.notdefined || 0) + (chartData.ambiguous || 0) + (chartData.skipped || 0);
+    var total = chartData.passed + chartData.failed + (chartData.pending || 0) + (chartData.notdefined || 0) + (chartData.ambiguous || 0) + (chartData.skipped || 0) || (chartData.rerun || 0);
     var title;
 
     if (total === 1) {
@@ -23,7 +24,7 @@ function drawChart(chartData) {
         height: 240,
         title: title,
         is3D: true,
-        colors: ['#5cb85c', '#d9534f', '#999', '#5bc0de', '#428bca', '#f0ad4e'],
+        colors: ['#5cb85c', '#d9534f', '#999', '#5bc0de', '#428bca', '#f0ad4e', '#f0ad4e'],
         fontSize: '13',
         fontName: '"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif',
         slices: {
@@ -32,7 +33,8 @@ function drawChart(chartData) {
             3: {offset: 0.4},
             4: {offset: 0.4},
             5: {offset: 0.4},
-            6: {offset: 0.4}
+            6: {offset: 0.4},
+            7: {offset: 0.4}
         },
         titleTextStyle: {
             fontSize: '13',
