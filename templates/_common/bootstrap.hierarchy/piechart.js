@@ -23,7 +23,7 @@ function drawChart(chartData) {
         width: '100%',
         height: 240,
         title: title,
-        colors: ['#5cb85c', '#d9534f', '#999', '#5bc0de', '#428bca', '#f0ad4e', '#f1e87e'],
+        colors: ['#5cb85c', '#d9534f', '#999', '#5bc0de', '#428bca', '#f0ad4e', '#ff9933'],
         fontSize: '13',
         fontName: '"Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif',
         titleTextStyle: {
