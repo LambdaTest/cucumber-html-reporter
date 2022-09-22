@@ -260,3 +260,7 @@ pre {
 .feature-failed{
     display: block;
 }
+
+.label-saffron{
+    background-color: #ff9933;
+}

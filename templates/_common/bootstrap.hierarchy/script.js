@@ -9,7 +9,9 @@ $(document).ready(function() {
 
     var $generated = $('.generated-on');
 
-    $generated.text('Generated ' + moment($generated.text()).fromNow());
+    var timestamp = $generated.text();
+    $generated.text('Generated ' + moment(timestamp).fromNow());
+    $generated.prop('title', new Date(timestamp).toISOString());
 });
 
 function toggle(className) {

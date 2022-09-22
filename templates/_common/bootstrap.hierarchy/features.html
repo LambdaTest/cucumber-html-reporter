@@ -65,6 +65,8 @@
                                         </div>
                                         <div>
                             <span class="label-container">
+                              <% if (element.retried) { %><span class="label label-saffron"
+                                                              title="Retried Scenarios <%= element.retried %> times"><%= element.retried %></span><% } %>
                               <% if (element.passed) { %><span class="label label-success"
                                                                title="<%= element.passed %> Steps Passed"><%= element.passed %></span><% } %>
                               <% if (element.notdefined) { %><span class="label label-info"
