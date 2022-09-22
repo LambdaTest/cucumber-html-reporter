@@ -264,3 +264,15 @@ pre {
 .label-saffron{
     background-color: #ff9933;
 }
+
+.label-retries {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90px;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.label-retries > span:first-child {
+    min-width: 100%;
+}

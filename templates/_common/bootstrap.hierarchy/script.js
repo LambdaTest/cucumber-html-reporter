@@ -10,7 +10,7 @@ $(document).ready(function() {
     var $generated = $('.generated-on');
 
     var timestamp = $generated.text();
-    $generated.text('Generated ' + moment(timestamp).fromNow());
+    $generated.text('Report generated ' + moment(timestamp).fromNow());
     $generated.prop('title', new Date(timestamp).toISOString());
 });
 
