@@ -1,9 +1,9 @@
 'use strict';
-var chai = require('chai');
-var fs = require('fs-extra');
-var path = require('path');
+const chai = require('chai');
+const fs = require('fs-extra');
+const path = require('path');
 
-var should = chai.should();
+const should = chai.should();
 
 module.exports = function assertHtmlReports(outputDirectory) {
 
@@ -19,10 +19,10 @@ module.exports = function assertHtmlReports(outputDirectory) {
         return fs.existsSync(dir);
     }
 
-    var hierarchyHtmlFile = path.join(outputDirectory, 'cucumber_report_hierarchy.html');
-    var bootstrapHtmlFile = path.join(outputDirectory, 'cucumber_report_bootstrap.html');
-    var foundationHtmlFile = path.join(outputDirectory, 'cucumber_report_foundation.html');
-    var simpleHtmlFile = path.join(outputDirectory, 'cucumber_report_simple.html');
+    const hierarchyHtmlFile = path.join(outputDirectory, 'cucumber_report_hierarchy.html');
+    const bootstrapHtmlFile = path.join(outputDirectory, 'cucumber_report_bootstrap.html');
+    const foundationHtmlFile = path.join(outputDirectory, 'cucumber_report_foundation.html');
+    const simpleHtmlFile = path.join(outputDirectory, 'cucumber_report_simple.html');
 
     isReportExists(hierarchyHtmlFile).should.be.equal(true, 'hierarchyHtmlFile file \'' + hierarchyHtmlFile + '\' does not exist');
     isReportExists(bootstrapHtmlFile).should.be.equal(true, 'bootstrapHtmlFile file \'' + bootstrapHtmlFile + '\' does not exist');
