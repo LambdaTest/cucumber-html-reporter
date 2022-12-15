@@ -1,22 +1,22 @@
-var path = require('path');
-var fs = require('fs-extra');
-var find = require('find');
-var reporter = require('../index');
-var assertHtmlReports = require('./assert/assertHtmlReports');
+const path = require('path');
+const fs = require('fs-extra');
+const find = require('find');
+const reporter = require('../index');
+const assertHtmlReports = require('./assert/assertHtmlReports');
 
-var theme = {
+let theme = {
     hierarchy: 'hierarchy',
     bootstrap: 'bootstrap',
     foundation: 'foundation',
     simple: 'simple'
 };
 
-var outputDirectory = 'test/report';
-var jsonFile = 'test/report/cucumber_report.json';
-var jsonDir = 'test/report/multi';
+let outputDirectory = 'test/report';
+let jsonFile = 'test/report/cucumber_report.json';
+let jsonDir = 'test/report/multi';
 
 function removeReports() {
-    var files = find.fileSync(/\.html/, outputDirectory);
+    let files = find.fileSync(/\.html/, outputDirectory);
     files.map(function (file) {
         fs.unlinkSync(file);
     });
@@ -43,13 +43,13 @@ function getOptions(theme) {
 }
 
 function getJsonFileOptions(theme) {
-    var options = getOptions(theme);
+    let options = getOptions(theme);
     options.jsonFile = jsonFile;
     return options;
 }
 
 function getJsonDirOptions(theme) {
-    var options = getOptions(theme);
+    let options = getOptions(theme);
     options.jsonDir = jsonDir;
     return options;
 }
