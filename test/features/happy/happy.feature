@@ -15,20 +15,20 @@ Feature: Happy HTML reporting
     When he provides cucumber JSON file to reporter
     Then cucumber-html-reporter should create HTML report
 
-  @testScenarioOutline
-  Scenario Outline: Fred runs scenario outline for <name> and print on HTML report
-
-  John & Bob wants to run cucumber scenarios
-  - expects to have HTML reports
-
-    Given Fred runs a passing cucumber scenario on behalf of "<name>"
-    When he provides cucumber JSON file to reporter
-    Then cucumber-html-reporter should create HTML report
-
-    Examples:
-      | name |
-      | John |
-      | Bob  |
+#  @testScenarioOutline
+#  Scenario Outline: Fred runs scenario outline for <name> and print on HTML report
+#
+#  John & Bob wants to run cucumber scenarios
+#  - expects to have HTML reports
+#
+#    Given Fred runs a passing cucumber scenario on behalf of "<name>"
+#    When he provides cucumber JSON file to reporter
+#    Then cucumber-html-reporter should create HTML report
+#
+#    Examples:
+#      | name |
+#      | John |
+#      | Bob  |
 
   @testAttachDebugData
   Scenario: Fred wants to print test data in the HTML reports for debugging purpose

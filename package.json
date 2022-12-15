@@ -143,9 +143,9 @@
     }
   ],
   "scripts": {
-    "pretest": "node node_modules/cucumber/bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
+    "pretest": "node --trace-deprecation node_modules/cucumber/bin/cucumber-js test/features/ -r test/features/step_definitions -f json:test/report/cucumber_report.json --no-strict || true",
     "clean": "rm -rf screenshots",
-    "test": "node test/createHtmlReports.js"
+    "test": "node --trace-deprecation test/createHtmlReports.js"
   },
   "repository": {
     "type": "git",
