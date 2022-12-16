@@ -166,14 +166,13 @@
   "license": "MIT",
   "homepage": "https://github.com/gkushang/cucumber-html-reporter#readme",
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "4.1.2",
     "find": "^0.3.0",
     "fs-extra": "^11.1.0",
     "js-base64": "^3.7.3",
     "jsonfile": "^6.1.0",
     "lodash": "^4.17.11",
     "node-emoji": "^1.10.0",
-    "open": "^8.4.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
