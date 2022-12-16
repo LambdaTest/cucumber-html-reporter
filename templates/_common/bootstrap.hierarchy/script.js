@@ -7,15 +7,15 @@ $(document).ready(function() {
         $(this).prev().addClass('open');
     });
 
-    var $generated = $('.generated-on');
+    let $generated = $('.generated-on');
 
-    var timestamp = $generated.text();
+    let timestamp = $generated.text();
     $generated.text('Report generated ' + moment(timestamp).fromNow());
     $generated.prop('title', new Date(timestamp).toISOString());
 });
 
 function toggle(className) {
-  var x = $(className);
+  let x = $(className);
   if ( x.css('display') === "none") {
     x.css('display', 'block');
   } else {

@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 const find = require('find');
-const reporter = require('../index');
+const reporter = require('../index.js');
 const assertHtmlReports = require('./assert/assertHtmlReports');
 
 let theme = {

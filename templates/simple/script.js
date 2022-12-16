@@ -8,8 +8,8 @@ function toggleScreenshot(e){
     }
 }
 
-var toggleEls = document.querySelectorAll("a.toggle");
+let toggleEls = document.querySelectorAll("a.toggle");
 
-for(var i = 0; i < toggleEls.length; i++){
+for(let i = 0; i < toggleEls.length; i++){
     toggleEls[i].addEventListener("click", toggleScreenshot);
 }

@@ -1,4 +1,4 @@
-const { Given, When, Then} = require('cucumber');
+const { Given, When, Then} = require('@cucumber/cucumber');
 
 Then(/^this feature runs with background$/, function (callback) {
     callback();

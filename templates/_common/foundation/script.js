@@ -1,16 +1,16 @@
 window.onload = function() {
 
     //  Accordion hide/show
-    var accordionTitles = document.getElementsByClassName('accordion-title');
+    let accordionTitles = document.getElementsByClassName('accordion-title');
 
     //  Convert node list to array
     Array.prototype.slice.call(accordionTitles).forEach(function(title) {
 
         title.onclick = function() {
 
-            var content = nextElement(title);
-            var style = window.getComputedStyle(content);
-            var display = style.getPropertyValue('display');
+            let content = nextElement(title);
+            let style = window.getComputedStyle(content);
+            let display = style.getPropertyValue('display');
 
             if (display === 'block') {
                 content.style.display = 'none';
@@ -23,7 +23,7 @@ window.onload = function() {
     });
 
     //  Update build time to since
-    var buildTimeElem = document.getElementById("buildTime");
+    let buildTimeElem = document.getElementById("buildTime");
     buildTimeElem.innerHTML = 'Built ' + moment(buildTimeElem.innerHTML).fromNow();
 };
 
