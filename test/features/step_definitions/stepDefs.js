@@ -1,8 +1,4 @@
-'use strict';
-
-const Given = require('cucumber').Given;
-const Then = require('cucumber').Then;
-const When = require('cucumber').When;
+const { Given, When, Then} = require('cucumber');
 
 Then(/^this feature runs with background$/, function (callback) {
     callback();

@@ -1,15 +1,12 @@
-'use strict';
+const {Before, After} = require('cucumber');
 
-const Before = require('cucumber').Before;
-const After = require('cucumber').After;
+// const chalk = require('chalk');
 
-const chalk = require('chalk');
-
-Before(function (scenario, callback) {
-    console.log( '\n' + chalk.blue.bgYellow.bold('TESTING: ') + chalk.white.bgBlue.bold(' console.log() should not break the report'));
-    this.scenario = scenario;
-    callback();
-});
+// Before(function (scenario, callback) {
+//     console.log( '\n' + chalk.blue.bgYellow.bold('TESTING: ') + chalk.white.bgBlue.bold(' console.log() should not break the report'));
+//     this.scenario = scenario;
+//     callback();
+// });
 
 Before({tags: '@testPassing'}, function (scenario, callback) {
     this.attach('Tests INFO will print here.' +
