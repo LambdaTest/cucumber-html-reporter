@@ -15,8 +15,7 @@ interface Options {
   scenarioTimestamp?: boolean,
   metadata?: {
     [key: string]: string
-  },
-  reportType: 'json' | 'html',
+  }
 }
 
 export function generate(options: Options, callback?: () => void): void
