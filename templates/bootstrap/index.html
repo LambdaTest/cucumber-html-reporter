@@ -76,6 +76,92 @@
 
     <div class="container">
 
+         <div class="count-wrapper mb-20px">
+        <div class="card blue-box">
+          <div class="feature-title">
+            <h4>All Features</h2>
+          </div>
+          <div class="feature-value">
+            <h5>
+              <%= suite.features.summary.featureTotal %>
+            </h5>
+          </div>
+        </div>
+        <div class="card green-box">
+          <div class="feature-title">
+            <h4>Passed Features</h2>
+          </div>
+          <div class="feature-value">
+            <h5>
+              <%= suite.features.summary.passed %>
+            </h5>
+          </div>
+        </div>
+        <div class="card red-box">
+          <div class="feature-title">
+            <h4>Failed Features</h2>
+          </div>
+          <div class="feature-value">
+            <h5>
+              <%= suite.features.summary.failed %>
+            </h5>
+          </div>
+        </div>
+
+        <% if (suite.features.summary.skipped) { %>
+          <div class="card yellow-box">
+            <div class="feature-title">
+              <h4>Skipped Skipped</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.features.summary.skipped %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
+        <% if (suite.features.summary.pending) { %>
+          <div class="card gray-box">
+            <div class="feature-title">
+              <h4>Pending Features</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.features.summary.pending %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
+        <% if (suite.features.summary.notdefined) { %>
+          <div class="card undefined-box">
+            <div class="feature-title">
+              <h4>Undefined Features</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.features.summary.notdefined %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
+        <% if (suite.features.summary.ambiguous) { %>
+          <div class="card amb-box">
+            <div class="feature-title">
+              <h4>Ambiguous Features</h2>
+            </div>
+            <div class="feature-value">
+              <h5>
+                <%= suite.features.summary.ambiguous %>
+              </h5>
+            </div>
+          </div>
+          <% }
+        %>
+      </div>
+
       <div class="count-wrapper mb-20px">
         <div class="card blue-box">
           <div class="feature-title">
