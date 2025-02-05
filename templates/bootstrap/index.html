@@ -74,6 +74,27 @@
       </div>
     </div>
 
+    <div style="display:none">
+        <div>
+           <h2>Features</h2>
+      "failed" : <%= suite.features.summary.failed %>,
+                                                            "passed" : <%= suite.features.summary.passed %>,
+                                                            "notdefined" : <%= suite.features.summary.notdefined %>,
+                                                            "pending" : <%= suite.features.summary.pending %>,
+                                                            "skipped" : <%= suite.features.summary.skipped %>,
+                                                            "ambiguous" : <%= suite.features.summary.ambiguous %>
+           <h2>Scenarios</h2>
+      
+                                                            "failed" : <%= suite.scenarios.failed %>,
+                                                            "passed" : <%= suite.scenarios.passed %>,
+                                                            "rerun" : <%= suite.scenarios.rerun %>,
+                                                            "notdefined" : <%= suite.scenarios.notdefined %>,
+                                                            "pending" : <%= suite.scenarios.pending %>,
+                                                            "skipped" : <%= suite.scenarios.skipped %>,
+                                                            "ambiguous" : <%= suite.scenarios.ambiguous %>
+        </div>
+    </div>
+
     <div class="container">
 
          <div class="count-wrapper mb-20px">
