@@ -83,6 +83,8 @@
                                                             "pending" : <%= suite.features.summary.pending %>,
                                                             "skipped" : <%= suite.features.summary.skipped %>,
                                                             "ambiguous" : <%= suite.features.summary.ambiguous %>
+                                                             "newTotal" : <%= suite.features.summary.getTotal() %>
+                                                              "prevTotal" : <%= suite.features.summary.featureTotal %>
            <h2>Scenarios</h2>
       
                                                             "failed" : <%= suite.scenarios.failed %>,
@@ -104,7 +106,7 @@
           </div>
           <div class="feature-value">
             <h5>
-              <%= suite.features.summary.featureTotal %>
+              <%= suite.features.summary.getTotal() %>
             </h5>
           </div>
         </div>
